@@ -122,9 +122,9 @@ if (length(stop_watch_clock) != nrow(annotations)) {
 # =========================================================
 
 elevation_annotate <- c(
-  1000, 800, 600, 50, 0,
-  1500, 800, 600, 100, 0,
-  500, 0, 0
+  1000, 700, 500, 50, -250,
+  2000, 1300, 200, -200, -100,
+  800, 0, 0
 )
 
 if (nrow(annotations) != length(elevation_annotate)) {
@@ -734,8 +734,8 @@ geom_segment(
       label = label_text,
       group = interaction(frame, trigger_x)
     ),
-    colour = "#53868B",
-    size = 3,
+    colour = "black",
+    size = 5,
     fontface = "bold",
     vjust = 0,
     hjust = 0,
@@ -854,6 +854,8 @@ anim <- animate(
   fps = fps,
   res = 72
 )
+
+anim
 
 # High-resolution GIF
 anim_gif <- animate(
